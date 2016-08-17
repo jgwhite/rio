@@ -1,0 +1,9 @@
+<article class="pa3 bb b--light-gray bg-white tc">
+  <h1 class="mt0 mb3 dark-gray">{{team.country_name}}</h1>
+  {{#each (list "gold" "silver" "bronze") as |t|}}
+    <dl class="dib mv0 mh2 {{t}}">
+      <dt class="f6 f5-ns b ml0">{{classify t}}</dt>
+      <dd class="f3 f2-ns b ml0">{{get team (concat t "_count")}}</dd>
+    </dl>
+  {{/each}}
+</article>

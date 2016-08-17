@@ -7,7 +7,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('medals');
+  this.route('teams');
+  this.route('team', { path: 'teams/:id' });
 });
 
 export default Router;
