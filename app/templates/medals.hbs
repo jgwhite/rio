@@ -1,0 +1,16 @@
+<ol>
+  {{#each model as |entry|}}
+    <li>
+      <dl>
+        <dt>Country</dt>
+        <dd>{{entry.country_name}}</dd>
+        <dt>Gold</dt>
+        <dd>{{entry.gold_count}}</dd>
+        <dt>Silver</dt>
+        <dd>{{entry.silver_count}}</dd>
+        <dt>Bronze</dt>
+        <dd>{{entry.bronze_count}}</dd>
+      </dl>
+    </li>
+  {{/each}}
+</ol>
