@@ -1,8 +1,15 @@
 import Ember from 'ember';
-import ajax from 'ember-ajax';
+import service from 'ember-service/inject';
 
 export default Ember.Route.extend({
+  api: service(),
+
   model() {
-    return ajax('/api/medals');
+    return this.get('api').fetch('/api/medals');
+  },
+
+  renderTemplate() {
+    this._super(...arguments);
+    this.render('teams-header', { outlet: 'header' });
   }
 });

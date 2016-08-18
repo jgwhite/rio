@@ -1,0 +1,11 @@
+<label for="sort" class="f5 b mr3">Sort by:</label>
+<select onchange={{action (mut sort) value="target.value"}} id="sort" class="ma0">
+  {{#each-in (hash
+    Place="place"
+    Gold="gold_count"
+    Silver="silver_count"
+    Bronze="bronze_count"
+  ) as |k v|}}
+    <option value={{v}} selected={{eq v sort}}>{{k}}</option>
+  {{/each-in}}
+</select>

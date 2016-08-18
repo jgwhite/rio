@@ -1,3 +1,3 @@
-{{#each model as |team|}}
+{{#each (sort-by model sort (if (eq sort "place") "asc" "desc")) as |team|}}
   {{card-team team=team}}
 {{/each}}
